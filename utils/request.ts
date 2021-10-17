@@ -177,7 +177,7 @@ export default async function request<T>(
   url: string,
   options?: RequestInit,
   isFile?: boolean,
-): Promise<T | { err: ResponseError }> {
+): Promise<T> {
   if (!options) {
     options = {};
   }

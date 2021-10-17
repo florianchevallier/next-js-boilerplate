@@ -5,12 +5,6 @@ import { initialState } from '.';
 
 const selectSlice = (state: RootState) => state.login || initialState;
 
-export const selectLogin = createSelector(
-  [selectSlice],
-  state => state,
-);
+export const selectLogin = createSelector([selectSlice], state => state);
 
-export const selectLoginQuote = createSelector(
-  [selectSlice],
-  state => state.getRandomData,
-);
+export const selectLoginQuote = createSelector([selectSlice], state => state.getRandomData);

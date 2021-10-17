@@ -8,7 +8,7 @@ export const initialState: LoginState = {
   getRandomData: {
     loading: false,
     success: false,
-  }
+  },
 };
 
 const slice = createSlice({
@@ -22,7 +22,7 @@ const slice = createSlice({
     getRandomDataSuccess(state, action: PayloadAction<IRandomData>) {
       state.getRandomData.loading = false;
       state.getRandomData.success = true;
-      state.getRandomData.data = action.payload
+      state.getRandomData.data = action.payload;
     },
     getRandomDataError(state) {
       state.getRandomData.loading = false;

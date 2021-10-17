@@ -1,10 +1,10 @@
-import { take, call, put, select, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import request from 'utils/request';
 import { loginActions as actions } from '.';
 import { IRandomData } from './types';
 
 function* doSomething() {
-  const url = "https://quotes.rest/qod";
+  const url = 'https://quotes.rest/qod';
 
   try {
     const response: IRandomData = yield call(request, url);
@@ -13,7 +13,6 @@ function* doSomething() {
   } catch (err) {
     yield put(actions.getRandomDataError());
   }
-
 }
 
 export function* loginSaga() {
