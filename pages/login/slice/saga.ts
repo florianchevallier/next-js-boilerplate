@@ -8,6 +8,7 @@ function* doSomething() {
 
   try {
     const response: IRandomData = yield call(request, url);
+    yield call(request, '/api/login');
     yield put(actions.getRandomDataSuccess(response));
   } catch (err) {
     yield put(actions.getRandomDataError());
